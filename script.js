@@ -42,3 +42,20 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 });
+
+
+let prevScrollpos = window.pageYOffset;
+
+window.onscroll = function() {
+    let currentScrollPos = window.pageYOffset;
+    if (prevScrollpos > currentScrollPos) {
+        // Muestra el header y el menú cuando se hace scroll hacia arriba
+        document.querySelector("header").classList.remove("scrolled");
+        document.querySelector(".menu").classList.remove("scrolled");
+    } else {
+        // Oculta el header y el menú cuando se hace scroll hacia abajo
+        document.querySelector("header").classList.add("scrolled");
+        document.querySelector(".menu").classList.add("scrolled");
+    }
+    prevScrollpos = currentScrollPos;
+}

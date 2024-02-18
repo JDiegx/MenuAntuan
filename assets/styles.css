@@ -1,52 +1,53 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box; /* Asegura que el tamaño total de los elementos incluya el padding y el borde */
+    box-sizing: border-box;
 }
 
 body {
     font-family: "Open Sans", sans-serif;
     background-image: url(/assets/img/background.png);
-    background-size: cover; /* Ajusta la imagen para cubrir todo el fondo */
-    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-size: cover;
+    background-repeat: no-repeat;
     background-position: center;
-    color:#613d14;
+    color: #613d14;
     font-weight: 600;
 }
-
 header {
+    position: fixed;
+    top: 0;
     width: 100%;
     height: 100px;
-    background-color:#f7e6ce79;  
+    background-color: #f7e6cea2; /* Color de fondo con transparencia */
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: top 0.3s, background-color 0.3s; /* Transiciones suaves para el desplazamiento y cambio de color */
 }
 
-header .logo {
+header.scrolled {
+    background-color: rgba(238, 220, 194, 0.877); /* Cambio de tono con menos transparencia al hacer scroll */
 }
 
 .menu {
+    position: fixed;
+    top: 100px; /* Asegura que el menú esté debajo del header */
     width: 100%;
     height: 50px;
-    background-color:#f7e6ced3;  
+    background-color: #f7e6ced3;
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: flex-start; /* Alinear los elementos del menú a la izquierda */
-    overflow-x: scroll; /* Permitir el desplazamiento horizontal */
-    overflow-y: hidden; /* Ocultar la barra de desplazamiento vertical */
-    white-space: nowrap; /* Evitar que los elementos del menú se envuelvan */
+    justify-content: flex-start;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+    z-index: 999; /* Asegura que el menú esté por encima del contenido */
+    transition: top 0.3s; /* Añade una transición suave solo para el desplazamiento del menú */
 }
 
 .menu > div {
     padding: 0 15px; /* Añadir un espacio entre los elementos del menú */
-}
-
-.menu p {
-    margin: 0;
-    font-weight: bold;
-    color:#714A1C;
 }
 
 .hidden {
@@ -57,7 +58,7 @@ header .logo {
     width: 100%;
     display: flex;
     flex-direction: column;
-    margin-top: 40px;
+    margin-top: 150px; /* Ajusta el margen superior para evitar que el contenido se solape con el encabezado y el menú */
 }
 
 .container {
@@ -70,9 +71,9 @@ header .logo {
 
 .target {
     width: 90%;
-    max-width: 400px; /* Limitar el ancho máximo para que se vea bien en dispositivos pequeños */
+    max-width: 400px;
     height: 150px;
-    background-color:#f7e6cebb;  
+    background-color: #f7e6cebb;
     margin-bottom: 20px;
     border-radius: 22px;
     display: flex;
@@ -84,12 +85,12 @@ header .logo {
 .img {
     width: 120px;
     height: 120px;
-    background-color: #EEE3D4;
+    background-color: #eee3d4;
     border-radius: 20px;
     overflow: hidden;
 }
 
-.img img{
+.img img {
     width: 100%;
     height: 100%;
 }
@@ -106,14 +107,14 @@ header .logo {
     margin-bottom: 20px;
 }
 
-.papas{
+.papas {
     width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
 
-.papas .pp{
+.papas .pp {
     width: 55px;
     height: 20px;
     font-size: 15px;
@@ -121,44 +122,40 @@ header .logo {
     font-weight: 700;
 }
 
-.papas .pp p{
-}
-
-
-footer{
+footer {
     width: 100%;
     height: 350px;
     text-align: center;
     font-weight: bold;
-    background-color:#f7e6cea2;  
+    background-color: #f7e6cea2;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 
-footer .img-rpedidos{
+footer .img-rpedidos {
     width: 100%;
-
 }
-footer .redes-Sociales{
+
+footer .redes-Sociales {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
 }
 
-footer .redes-Sociales a svg{
-    color: #EEE3D4;
+footer .redes-Sociales a svg {
+    color: #eee3d4;
     width: 30px;
     height: 30px;
     margin-right: 25px;
 }
 
-.byJDiegx{
+.byJDiegx {
     width: 100%;
     height: 40px;
-    background-color:#f7e6ce79;  
+    background-color: #f7e6ce79;
     overflow: hidden;
     display: flex;
     flex-direction: row;
@@ -167,14 +164,11 @@ footer .redes-Sociales a svg{
     color: black;
 }
 
-.byJDiegx .X{
-    margin: 0px 20px;
-}
-
-.byJDiegx img{
+.byJDiegx img {
     width: 30px;
     height: 30px;
 }
+
 /* Estilos para dispositivos móviles */
 @media (max-width: 768px) {
     header {
@@ -182,14 +176,18 @@ footer .redes-Sociales a svg{
     }
 
     .menu {
-        height: 50px; /* Mantener el mismo alto del menú en dispositivos móviles */
-        flex-direction: row; /* Mostrar los elementos del menú en fila */
-        overflow-x: auto; /* Permitir el desplazamiento horizontal */
-        overflow-y: hidden; /* Ocultar la barra de desplazamiento vertical */
+        height: 50px;
+        flex-direction: row;
+        overflow-x: auto;
+        overflow-y: hidden;
     }
 
     .target {
         width: 85%;
-        height: 150px; /* Reducir la altura del objetivo en dispositivos móviles */
+        height: 150px;
+    }
+
+    .content {
+        margin-top: 200px;
     }
 }
