@@ -1,0 +1,189 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Asegura que el tamaño total de los elementos incluya el padding y el borde */
+}
+
+body {
+    font-family: "Open Sans", sans-serif;
+    background-image: url(/assets/img/background.png);
+    background-size: cover; /* Ajusta la imagen para cubrir todo el fondo */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-position: center;
+    color:#613d14;
+    font-weight: 600;
+}
+
+header {
+    width: 100%;
+    height: 100px;
+    background-color:#f7e6ce79;  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header .logo {
+}
+
+.menu {
+    width: 100%;
+    height: 50px;
+    background-color:#f7e6ced3;  
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start; /* Alinear los elementos del menú a la izquierda */
+    overflow-x: scroll; /* Permitir el desplazamiento horizontal */
+    overflow-y: hidden; /* Ocultar la barra de desplazamiento vertical */
+    white-space: nowrap; /* Evitar que los elementos del menú se envuelvan */
+}
+
+.menu > div {
+    padding: 0 15px; /* Añadir un espacio entre los elementos del menú */
+}
+
+.menu p {
+    margin: 0;
+    font-weight: bold;
+    color:#714A1C;
+}
+
+.hidden {
+    display: none;
+}
+
+.content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.target {
+    width: 90%;
+    max-width: 400px; /* Limitar el ancho máximo para que se vea bien en dispositivos pequeños */
+    height: 150px;
+    background-color:#f7e6cebb;  
+    margin-bottom: 20px;
+    border-radius: 22px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.img {
+    width: 120px;
+    height: 120px;
+    background-color: #EEE3D4;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.img img{
+    width: 100%;
+    height: 100%;
+}
+
+.info {
+    width: 120px;
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.info {
+    margin-bottom: 20px;
+}
+
+.papas{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.papas .pp{
+    width: 55px;
+    height: 20px;
+    font-size: 15px;
+    text-align: center;
+    font-weight: 700;
+}
+
+.papas .pp p{
+}
+
+
+footer{
+    width: 100%;
+    height: 350px;
+    text-align: center;
+    font-weight: bold;
+    background-color:#f7e6cea2;  
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+footer .redes-Sociales{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+footer .redes-Sociales a svg{
+    color: #EEE3D4;
+    width: 30px;
+    height: 30px;
+    margin-right: 25px;
+}
+
+.byJDiegx{
+    width: 100%;
+    height: 40px;
+    background-color:#f7e6ce79;  
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    color: black;
+}
+
+.byJDiegx .X{
+    margin: 0px 20px;
+}
+.byJDiegx img{
+    width: 30px;
+    height: 30px;
+}
+/* Estilos para dispositivos móviles */
+@media (max-width: 768px) {
+    header {
+        height: 100px;
+    }
+
+    .menu {
+        height: 50px; /* Mantener el mismo alto del menú en dispositivos móviles */
+        flex-direction: row; /* Mostrar los elementos del menú en fila */
+        overflow-x: auto; /* Permitir el desplazamiento horizontal */
+        overflow-y: hidden; /* Ocultar la barra de desplazamiento vertical */
+    }
+
+    .target {
+        width: 85%;
+        height: 150px; /* Reducir la altura del objetivo en dispositivos móviles */
+    }
+}
