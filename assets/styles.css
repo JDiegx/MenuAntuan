@@ -158,7 +158,7 @@ footer .redes-Sociales a svg:hover{
 
 .by{
     width: 100%;
-    height: 40px;
+    height: 45px;
     background-color: #f7e6cece; /* Color de fondo con transparencia */
     overflow: hidden;
     display: flex;
@@ -167,11 +167,6 @@ footer .redes-Sociales a svg:hover{
     justify-content: center;
 }
 
-.by .jdiegx{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
 
 /* Estilos para dispositivos móviles */
 @media (max-width: 768px) {
