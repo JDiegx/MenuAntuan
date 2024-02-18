@@ -18,7 +18,7 @@ header {
     top: 0;
     width: 100%;
     height: 100px;
-    background-color: #f7e6cea2; /* Color de fondo con transparencia */
+    background-color: #f7e6ceb2; /* Color de fondo con transparencia */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -146,27 +146,31 @@ footer .redes-Sociales {
 }
 
 footer .redes-Sociales a svg {
-    color: #eee3d4;
+    color: #613d14;
     width: 30px;
     height: 30px;
     margin-right: 25px;
 }
 
-.byJDiegx {
-    width: 100%;
-    height: 40px;
-    background-color: #f7e6ce79;
-    overflow: hidden;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    color: black;
+footer .redes-Sociales a svg:hover{
+    color: #eee3d4;
 }
 
-.byJDiegx img {
-    width: 30px;
-    height: 30px;
+.by{
+    width: 100%;
+    height: 40px;
+    background-color: #f7e6cece; /* Color de fondo con transparencia */
+    overflow: hidden;
+    display: flex;
+    color: white;
+    align-items: center;
+    justify-content: center;
+}
+
+.by .jdiegx{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 /* Estilos para dispositivos móviles */
