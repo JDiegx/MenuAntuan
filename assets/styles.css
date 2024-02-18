@@ -137,10 +137,15 @@ footer{
     justify-content: center;
 }
 
+footer .img-rpedidos{
+    width: 100%;
+
+}
 footer .redes-Sociales{
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: center;
 }
 
 footer .redes-Sociales a svg{
@@ -165,6 +170,7 @@ footer .redes-Sociales a svg{
 .byJDiegx .X{
     margin: 0px 20px;
 }
+
 .byJDiegx img{
     width: 30px;
     height: 30px;
