@@ -58,7 +58,7 @@ header.scrolled {
     width: 100%;
     display: flex;
     flex-direction: column;
-    margin-top: 150px; /* Ajusta el margen superior para evitar que el contenido se solape con el encabezado y el menú */
+    margin-top: 200px; /* Ajusta el margen superior para evitar que el contenido se solape con el encabezado y el menú */
 }
 
 .container {
@@ -185,9 +185,5 @@ footer .redes-Sociales a svg {
     .target {
         width: 85%;
         height: 150px;
-    }
-
-    .content {
-        margin-top: 200px;
     }
 }
