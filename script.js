@@ -24,3 +24,21 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 });
+
+document.addEventListener("DOMContentLoaded", function() {
+    const options = document.querySelectorAll(".menu div p");
+
+    options.forEach(option => {
+        option.addEventListener("click", function() {
+            const category = option.textContent.toLowerCase();
+            const categorySection = document.getElementById(category);
+            const categoryElements = document.querySelectorAll(".category");
+            
+            categoryElements.forEach(element => {
+                element.classList.add("hidden");
+            });
+            
+            categorySection.classList.remove("hidden");
+        });
+    });
+});
