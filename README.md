@@ -19,7 +19,7 @@ Si te gusta este proyecto y estás interesado en colaborar conmigo en futuros de
 
 ## Instalación
 
-Para probar el menú Antuan en tu dispositivo móvil, simplemente accede a la siguiente URL: [Enlace al menú Antuan](#)
+Para probar el menú Antuan en tu dispositivo móvil, simplemente accede a la siguiente URL: [Enlace al menú Antuan](https://menu-antuan.vercel.app/)
 
 ## Contribuir
 
@@ -31,4 +31,4 @@ Este proyecto está bajo la Licencia MIT. Consulta el archivo [LICENSE](LICENSE)
 
 ---
 
-Espero que este README sea de tu agrado y cumpla con tus expectativas. Si necesitas más ajustes o tienes alguna otra solicitud, no dudes en decirlo.
+
